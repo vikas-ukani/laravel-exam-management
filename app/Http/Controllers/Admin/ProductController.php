@@ -61,7 +61,8 @@ class ProductController extends Controller
             }
         }
         Product::create($input);
-        return view('admin.products.create')->with('success', __('Product added!'));
+        $categories = Category::where('is_active', true)->get();
+        return redirect()->back()->with('success', __('Product added!'))->with('categories', $categories);
     }
 
     /**
@@ -72,7 +73,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return view('admin.products.show', compact('product') );
+        return view('admin.products.show', compact('product'));
     }
 
     /**

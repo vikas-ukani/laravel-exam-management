@@ -11,7 +11,7 @@
                     <h2 class="mt-5 mb-4">Login Here</h2>
                     <form action={{ route('login') }} method="post">
                         @csrf
-                        @include('form.messages')
+                        @include('form.categoriesmessages')
 
                         <pre>
                             <code>
