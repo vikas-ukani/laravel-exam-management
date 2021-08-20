@@ -45,7 +45,7 @@ class AuthController extends Controller
         Auth::login($user);
         // Auth::attempt(['email' => $input['email'], 'password' =>  $user->password]);
         if ($user->user_type == 'USER') {
-            return redirect('products/index');
+            return redirect()->route('products.index');
         } else {
             return redirect('admin/products');
         }

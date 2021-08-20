@@ -13,6 +13,12 @@
                         @csrf
                         @include('form.messages')
 
+                        <pre>
+                            <code>
+                                Email : "admin@admin.com"
+                                Password: "adminadmin"
+                            </code>
+                        </pre>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email address</label>
                             <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com">
